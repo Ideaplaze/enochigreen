@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EnochiGreen LLC</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #333;
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      width: 100%;
+      max-width: 960px;
+      background-color: #ffffff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    header {
+      background-color: #e0f2e9;
+      padding: 2em;
+      text-align: center;
+      border-bottom: 4px solid #b5d6b2;
+      position: relative;
+    }
+    header h1 {
+      color: #2e7d32;
+      margin: 0;
+    }
+    header p {
+      color: #388e3c;
+    }
+    .lang-switch {
+      position: absolute;
+      top: 1em;
+      right: 1em;
+    }
+    .lang-switch button {
+      margin-left: 5px;
+      padding: 0.5em 1em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #a5d6a7;
+      color: #2e7d32;
+      font-weight: bold;
+    }
+    section {
+      padding: 2em;
+    }
+    .highlight {
+      background-color: #f1f8e9;
+      padding: 1.5em;
+      border-left: 4px solid #66bb6a;
+      border-radius: 5px;
+    }
+    .images {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2em;
+      padding: 1em 0;
+    }
+    .images img {
+      width: 100%;
+      max-width: 280px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .image-stack {
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+    .image-stack img {
+      width: 280px;
+      border-radius: 50%;
+      object-fit: cover;
+      position: relative;
+    }
+    .image-stack img:not(:first-child) {
+      margin-left: -60px;
+    }
+    footer {
+      background-color: #e0f2e9;
+      padding: 2em;
+      text-align: center;
+      border-top: 4px solid #b5d6b2;
+    }
+    .contact {
+      margin-top: 1em;
+      color: #2e7d32;
+    }
+    .logo {
+      font-size: 3em;
+      margin-bottom: 0.2em;
+    }
+    .lang-en, .lang-ja {
+      display: none;
+    }
+    .active {
+      display: block;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      max-width: 500px;
+      margin: 2em auto 0;
+    }
+    input, textarea {
+      padding: 0.75em;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    textarea {
+      min-height: 150px;
+      font-size: 1.05em;
+    }
+    button[type="submit"] {
+      background-color: #66bb6a;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      padding: 1em;
+      font-size: 1.1em;
+    }
+    button[type="submit"]:hover {
+      background-color: #4caf50;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="lang-switch">
+        <button onclick="switchLang('en')">🇬🇧 English</button>
+        <button onclick="switchLang('ja')">🇯🇵 日本語</button>
+      </div>
+      <div class="logo">🌴</div>
+      <h1 class="lang-en active">EnochiGreen LLC</h1>
+      <h1 class="lang-ja">エノチグリーン合同会社</h1>
+      <p class="lang-en active">Providing quality affordable food</p>
+      <p class="lang-ja">手頃な価格で高品質な食品を提供します</p>
+    </header>
+
+    <section>
+      <div class="lang-en active">
+        <h2>About Us</h2>
+        <p>
+          We buy high-quality Japanese food products and resell them in Africa.
+          We're also focused on developing original food offerings, combining Japanese quality with local flavor preferences.
+        </p>
+      </div>
+      <div class="lang-ja">
+        <h2>私たちについて</h2>
+        <p>
+          日本の高品質な食品を購入し、アフリカで販売しています。
+          また、日本の品質と現地の味を融合させたオリジナル食品の開発にも取り組んでいます。
+        </p>
+      </div>
+    </section>
+
+    <section class="highlight">
+      <div class="lang-en active">
+        <h2>What We Do</h2>
+        <p>
+          EnochiGreen LLC began with a mission to make premium Japanese food products more accessible and affordable in African markets. Over the past three years, we have engaged in the trading of carefully selected teas, including Japanese green tea and black tea. While we work on our own original product, we are happy to trade on finished products from other companies.
+        </p>
+        <p>
+          Our primary focus moving forward is the creation of our own brand—starting with an original spice blend that reflects a harmony of African taste and Japanese quality.
+        </p>
+      </div>
+      <div class="lang-ja">
+        <h2>事業内容</h2>
+        <p>
+          エノチグリーン合同会社は、日本の高級食品をアフリカ市場により手頃に届けるという使命からスタートしました。過去3年間、私たちは日本の緑茶や紅茶などの選び抜かれたお茶の販売に携わってきました。現在は、自社製品の開発に取り組みつつ、他社製の完成品の取り扱いも行っています。
+        </p>
+        <p>
+          今後は、アフリカの味覚と日本の品質を融合したオリジナルスパイスの開発を皮切りに、自社ブランドの確立に注力していきます。
+        </p>
+      </div>
+    </section>
+
+    <section class="images">
+      <div class="lang-en active">
+        <h2>Products We Are Interested In</h2>
+        <p>
+          While EnochiGreen does not currently offer its own finished products, we are actively working toward developing unique offerings, beginning with a spice blend inspired by both African and Japanese culinary traditions.
+        </p>
+        <p>
+          We welcome collaboration with partners, creators, and producers interested in developing innovative food solutions.
+        </p>
+      </div>
+      <div class="lang-ja">
+        <h2>私たちが注目している製品</h2>
+        <p>
+          現在、エノチグリーンでは自社の完成品は提供していませんが、アフリカと日本の食文化を融合した独自のスパイスブレンドを皮切りに、魅力ある商品開発に取り組んでいます。
+        </p>
+        <p>
+          新たな食品ソリューションの創出に関心のあるパートナー、開発者、生産者との協業を歓迎します。
+        </p>
+      </div>
+      <div class="image-stack">
+        <img src="tea1.jpg" alt="Loose Leaf Teas">
+        <img src="spice blend1.jpg" alt="Spice Blend">
+        <img src="tea leafs.jpg" alt="Green Tea Leaves">
+      </div>
+    </section>
+
+    <footer>
+      <div class="lang-en active">
+        <h2>Contact Us</h2>
+        <form action="https://formsubmit.co/ideaplaze@gmail.com" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <input type="tel" name="phone" placeholder="Your Phone (optional)">
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+      <div class="lang-ja">
+        <h2>お問い合わせ</h2>
+        <form action="https://formsubmit.co/ideaplaze@gmail.com" method="POST">
+          <input type="text" name="name" placeholder="お名前" required>
+          <input type="email" name="email" placeholder="メールアドレス" required>
+          <input type="tel" name="phone" placeholder="電話番号（任意）">
+          <textarea name="message" placeholder="メッセージ" required></textarea>
+          <button type="submit">送信</button>
+        </form>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang-en, .lang-ja').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.lang-' + lang).forEach(el => el.classList.add('active'));
+    }
+  </script>
+</body>
+</html>
